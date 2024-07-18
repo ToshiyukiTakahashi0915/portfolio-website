@@ -1,6 +1,8 @@
-import React, { useState, useRef } from 'react';
-import { Github, Twitter, Mail, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
+import React, { useState } from 'react';
+import { Github, Twitter, Mail, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+
+const imagePath = process.env.NODE_ENV === 'production' ? '' : '/';
 
 const projects = [
   {
@@ -15,9 +17,9 @@ const projects = [
     field: '工業DX',
     price: '30万円',
     images: [
-      '/images/S__60465159.jpg',
-      '/images/S__60465157.jpg',
-      '/images/S__60465160.jpg'
+      `${imagePath}images/S__60465159.jpg`,
+      `${imagePath}images/S__60465157.jpg`,
+      `${imagePath}images/S__60465160.jpg`
     ]
   },
   {
@@ -30,10 +32,11 @@ const projects = [
     },
     challenges: 'チーム開発でのタスク管理と顧客対応',
     field: '建設業務改善',
+    price: '33万円',
     images: [
-      '/images/S__60465161.jpg',
-      '/images/S__60465163.jpg',
-      '/images/S__60465164.jpg'
+      `images/S__60465161.jpg`,
+      `images/S__60465163.jpg`,
+      `images/S__60465164.jpg`
     ]
   }
 ];

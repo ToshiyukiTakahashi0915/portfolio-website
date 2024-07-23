@@ -24,10 +24,10 @@ const projects = [
   },
   {
     title: '足場作業者管理アプリ',
-    description: 'Webの管理画面から配置された作業員がスマホアプリで現場確認可能。プッシュ通知機能実装。',
+    description: 'Webの管理画面から配置された作業員がスマホアプリで現場確認可能にする。プッシュ通知機能実装。',
     tech: {
       frameworks: ['Flutter'],
-      libraries: ['AWS SDK', 'FCM'],
+      libraries: ['AWS SDK','FCM', 'Riverpod', 'flutterlocalnotifications'],
       languages: ['Dart']
     },
     challenges: 'チーム開発でのタスク管理と顧客対応',
@@ -113,7 +113,7 @@ const Portfolio = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          夫くんのポートフォリオ
+          としゆきのポートフォリオ
         </motion.h1>
 
         <div className="grid gap-12 md:grid-cols-2">
@@ -152,7 +152,7 @@ const Portfolio = () => {
           ))}
         </div>
 
-        <motion.div
+        {/* <motion.div
           className="mt-12 flex justify-center space-x-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -170,7 +170,7 @@ const Portfolio = () => {
             <span className="sr-only">Email</span>
             <Mail className="h-8 w-8" />
           </a>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );
